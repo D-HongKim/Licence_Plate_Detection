@@ -1,0 +1,29 @@
+// 프로젝트의 최상위 build.gradle 파일
+
+buildscript {
+    // 플러그인과 라이브러리를 다운로드할 리포지토리 설정
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android 빌드 시스템을 위한 Gradle 플러그인
+        classpath 'com.android.tools.build:gradle:7.2.0' // 적절한 버전으로 업데이트 필요
+
+        // 추가적인 클래스패스 의존성을 여기에 추가
+        // 예시: classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
+    }
+}
+
+// 모든 하위 프로젝트/모듈에 공통으로 적용되는 리포지토리 설정
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// 필요한 경우, 타스크를 정의하거나 프로젝트 수준에서의 설정을 추가
+// 예시: task clean(type: Delete) {
+//     delete rootProject.buildDir
+// }
